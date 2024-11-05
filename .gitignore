@@ -1,0 +1,8 @@
+.DS_Store
+main.dSYM/
+*.exec
+*.json
+*.exe
+*.dmg
+*.db
+*.o
