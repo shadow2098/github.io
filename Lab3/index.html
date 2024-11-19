@@ -11,6 +11,20 @@
 </head>
 
 <body>
+  <!-- Header -->
+  <header class="main-header">
+    <div class="logo-container">
+      <img src="./image/logo.png" alt="Logo" class="logo">
+    </div>
+    <nav class="nav-links">
+      <a href="#about">About</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#experience">Experience</a>
+      <a href="#socials">Socials</a>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
   <div class="container">
     <div class="profile">
       <div class="profile_container">
@@ -28,12 +42,11 @@
             dolore
             magna aliqua. Ut enim ad minim veniam,
           </p>
-          <a class="downloadBtn" href="./cv.pdf" download="Resume.pdf">Download Resume</a>
         </div>
       </div>
     </div>
     <div class="group-1">
-      <div class="skills">
+      <div id="about" class="about">
         <h3 class="title">About</h3>
         <div class="profile_profileImg">
           <img src="./image/profileImage.png" alt="someone">
@@ -71,7 +84,7 @@
       </div>
 
       <div class="certification">
-        <h3 class="title">Portfolio</h3>
+        <h3 id="portfolio" class="title">Portfolio</h3>
         <div class="certification_item">
           <p class="item_preTitle">best one</p>
           <h4 class="item_title">Frontend Developer</h4>
@@ -85,7 +98,7 @@
     </div>
     <div class="group-2">
       <div class="exp">
-        <h3 class="title">Experience</h3>
+        <h3 id="experience" class="title">Experience</h3>
         <div class="exp_item">
           <p class="item_preTitle">2019 - present</p>
           <h4 class="item_title">Best Software LTD.</h4>
@@ -107,9 +120,9 @@
           </p>
         </div>
       </div>
-      <div class="awards">
+      <div class="Resume">
         <h3 class="title">Resume</h3>
-        <div class="awards_item">
+        <div class="awards_item_item">
           <p class="item_preTitle">2000</p>
           <h4 class="item_title">Best Software LTD.</h4>
           <p class=" description">
@@ -118,7 +131,7 @@
             magna aliqua. Ut enim ad minim veniam,
           </p>
         </div>
-        <div class="awards_item">
+        <div class="awards_item_item">
           <p class="item_preTitle">1990</p>
           <h4 class="item_title">Best Software LTD.</h4>
           <p class="description">
@@ -150,8 +163,7 @@
     </div>
     <hr>
     <div class="group-2">
-
-      <div class="skills">
+      <div class="Services">
         <h3 class="title">Services</h3>
         <div class="profile_profileImg">
             <video width="320" height="240" controls>
@@ -178,34 +190,52 @@
             City, Country
           </p>
           <p class="description">
-            +370 *** ** ***
+            +370 222 22 222
           </p>
           <p class="description">
-            someone@gmail.com
+            @gmail.com
           </p>
         </div>
       </div>
       <div class="social">
-        <h3 class="title">Socials</h3>
+        <h3 id="socials" class="title">Socials</h3>
         <div class="social_items">
-          <a href="#" target="_b" class="social_item">
+          <a href="https://github.com/" target="_b" class="social_item">
             <i data-feather="github"></i>
-            <span>/someone</span>
           </a>
-          <a href="#" target="_blank" class="social_item">
+          <a href="https://twitter.com/" target="_blank" class="social_item">
             <i data-feather="twitter"></i>
-            <span>/someone</span>
           </a>
-          <a href="#" target="_blank" class="social_item">
+          <a href="https://linkedin.com/in/" target="_blank" class="social_item">
             <i data-feather="linkedin"></i>
-            <span>/someone</span>
           </a>
         </div>
       </div>
     </div>
   </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="footer-content">
+      <div class="social-media">
+        <a href="https://github.com/" target="_blank"><i data-feather="github"></i></a>
+        <a href="https://twitter.com/" target="_blank"><i data-feather="twitter"></i></a>
+        <a href="https://linkedin.com/in/" target="_blank"><i data-feather="linkedin"></i></a>
+      </div>
+      <div class="contact-info">
+        <p>City, Country</p>
+        <p>+370 222 22 222</p>
+        <p>gmail.com</p>
+      </div>
+      <div class="creator-info">
+        <p>Shadow</p>
+      </div>
+    </div>
+  </footer>
+
   <script>
-    feather.replace()
+    feather.replace();
   </script>
 </body>
 
