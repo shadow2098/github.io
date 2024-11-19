@@ -11,7 +11,7 @@
 </head>
 
 <body>
-  <!-- Header -->
+
   <header class="main-header">
     <div class="logo-container">
       <img src="./image/logo.png" alt="Logo" class="logo">
@@ -24,7 +24,6 @@
     </nav>
   </header>
 
-  <!-- Main Content -->
   <div class="container">
     <div class="profile">
       <div class="profile_container">
@@ -215,7 +214,6 @@
   </div>
   </div>
 
-  <!-- Footer -->
   <footer class="main-footer">
     <div class="footer-content">
       <div class="social-media">
@@ -231,11 +229,27 @@
       <div class="creator-info">
         <p>Shadow</p>
       </div>
+      <button id="theme-toggle" class="theme-toggle">Toggle Light/Dark Mode</button>
     </div>
   </footer>
 
   <script>
     feather.replace();
+
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const htmlElement = document.documentElement;
+
+    themeToggleBtn.addEventListener('click', () => {
+      const currentTheme = htmlElement.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      htmlElement.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+    });
+
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      htmlElement.setAttribute('data-theme', savedTheme);
+    }
   </script>
 </body>
 
