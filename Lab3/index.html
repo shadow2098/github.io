@@ -233,6 +233,9 @@
     </div>
   </footer>
 
+
+  <button id="scroll-to-top" class="scroll-to-top" aria-label="Scroll to top">↑</button>
+
   <script>
     feather.replace();
 
@@ -250,7 +253,25 @@
     if (savedTheme) {
       htmlElement.setAttribute('data-theme', savedTheme);
     }
+
+    const scrollToTopBtn = document.getElementById('scroll-to-top');
+
+    window.addEventListener('scroll', () => {
+      if (document.documentElement.scrollTop > 200 || document.body.scrollTop > 200) {
+        scrollToTopBtn.style.display = 'block';
+      } else {
+        scrollToTopBtn.style.display = 'none';
+      }
+    });
+
+    scrollToTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
   </script>
+
 </body>
 
 </html>
