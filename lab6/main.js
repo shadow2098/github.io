@@ -28,6 +28,26 @@ const ratings = {
     one_to_ten_choice(id)
 );
 
+function validateForm(formData) {
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(formData.email)) {
+        alert('Please enter a valid email address.');
+        return false;
+    }
+
+    const phonePattern = /^\+?\d{1,4}(?:[ ]\d{1,4}){1,4}$/;
+    if (!phonePattern.test(formData.phone)) {
+        alert('Please enter a valid phone number (e.g., +111 111 11 111).');
+        return false;
+    }
+
+    if (formData.address.trim() === '') {
+        alert('Please enter a valid address.');
+        return false;
+    }
+    return true;
+}
+
 function displayResults(formData) {
     const resultDiv = document.getElementById('results');
     resultDiv.innerHTML = '';
@@ -64,6 +84,10 @@ document.getElementById('submitButton').addEventListener('click', () => {
         address: document.getElementById('address').value,
         ratings,
     };
+
+    if (!validateForm(formData)) {
+    return;
+    }
 
     console.log('Collected Data:', formData);
     alert('Data submitted');
