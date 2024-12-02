@@ -72,6 +72,15 @@ function displayResults(formData) {
     const average = numericValues.reduce((sum, value) => sum + value, 0) / numericValues.length;
     const averageField = document.createElement('p');
     averageField.textContent = `${formData.firstName} ${formData.lastName} (${formData.email}): ${average.toFixed(2)}`;
+
+    if (average >= 0 && average <= 3.4) {
+        averageField.style.color = 'red';
+    } else if (average > 3.4 && average <= 7.1) {
+        averageField.style.color = 'orange';
+    } else if (average > 7.1 && average <= 10) {
+        averageField.style.color = 'green';
+    }
+
     resultDiv.appendChild(averageField);
 }
 
