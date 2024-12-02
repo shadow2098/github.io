@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Contact Form</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Contact Form</h1>
+    <form id="contactForm">
+      <div class="form-group">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="first_name" name="first_name" required>
+      </div>
+      <div class="form-group">
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="last_name" name="last_name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+      </div>
+      <div class="form-group">
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" required></textarea>
+      </div>
+
+      <div class="form-group">
+        <label>Did you like our services?</label>
+        <div id="like_services" class="rating-group"></div>
+      </div>
+      <div class="form-group">
+        <label>How satisfied are you with the website?</label>
+        <div id="satisfaction" class="rating-group"></div>
+      </div>
+      <div class="form-group">
+        <label>Hello</label>
+        <div id="hello" class="rating-group"></div>
+      </div>
+      <div class="form-group">
+        <label>How likely are you to leave a tip?</label>
+        <div id="tip" class="rating-group"></div>
+      </div>
+      <div class="form-group">
+        <label>Would you recommend us to your friends?</label>
+        <div id="recommend" class="rating-group"></div>
+      </div>
+
+      <button type="button" id="submitButton">Submit</button>
+    </form>
+  </div>
+    <button id="theme-toggle" class="theme-toggle">Toggle Light/Dark Mode</button>
+  <script src="main.js"></script>
+</body>
+</html>
